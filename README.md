@@ -13,6 +13,23 @@ Um aplicativo completo de lista de contatos desenvolvido com Flutter, seguindo o
 - **Busca e Ordenação**: Buscar contatos e ordenar por nome (A-Z/Z-A)
 - **Configurações**: Personalizar informações do usuário e preferências
 
+## 📱 Telas do App
+
+### Lista de Contatos
+![Contact List](docs/screenshots/contact_list.png)
+
+### Detalhe do Contato
+![Contact Detail](docs/screenshots/contact.png)
+
+### Aniversariantes
+![Birthdays](docs/screenshots/birthdays.png)
+
+### Opções
+![Options](docs/screenshots/options.png)
+
+### Sobre o Desenvolvedor
+![Dev About](docs/screenshots/dev_about.png)
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Flutter/Dart** - Framework principal
@@ -26,50 +43,6 @@ Um aplicativo completo de lista de contatos desenvolvido com Flutter, seguindo o
 - **Share Plus** - Compartilhamento
 - **Convex Bottom Bar** - Navegação inferior
 - **Google Fonts** - Tipografia
-
-## 📱 Telas do App
-
-1. **Home** - Lista principal de contatos com busca e ordenação
-2. **Aniversários** - Contatos que fazem aniversário hoje
-3. **Opções** - Configurações do usuário e do app
-4. **DEV** - Informações sobre o projeto e links úteis
-
-## 🔧 Configuração
-
-### Pré-requisitos
-
-- Flutter SDK (versão 3.7.2 ou superior)
-- Android Studio / VS Code
-- Dispositivo Android ou emulador
-
-### Instalação
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/jciterceros/desafio_flutter_lista_de_contatos.git
-cd desafio_flutter_lista_de_contatos
-```
-
-2. Instale as dependências:
-```bash
-flutter pub get
-```
-
-3. Configure o Back4App:
-   - Crie uma conta no [Back4App](https://back4app.com)
-   - Crie um novo app
-   - Configure a classe "Contatos" com os campos:
-     - nome (String, required)
-     - telefone (String, optional)
-     - diaNascimento (Number, optional)
-     - mesNascimento (Number, optional)
-     - fotoUrl (String, optional)
-   - Atualize as credenciais em `lib/config/env_config.dart`
-
-4. Execute o app:
-```bash
-flutter run
-```
 
 ## 📁 Estrutura do Projeto
 

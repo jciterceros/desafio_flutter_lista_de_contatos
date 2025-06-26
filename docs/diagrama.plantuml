@@ -1,0 +1,58 @@
+@startuml
+
+class Contato {
+  +String? objectId
+  +String nome
+  +String? telefone
+  +int? diaNascimento
+  +int? mesNascimento
+  +String? fotoUrl
+  +DateTime? createdAt
+  +DateTime? updatedAt
+  +factory Contato.fromJson(Map<String, dynamic>)
+  +Map<String, dynamic> toJson()
+  +Contato copyWith(...)
+  +bool get fazAniversarioHoje
+}
+
+class ApiService {
+  +void initialize()
+  +Future<List<Contato>> getContatos()
+  +Future<Contato> createContato(Contato)
+  +Future<Contato> updateContato(Contato)
+  +Future<void> deleteContato(String)
+  +Future<String> uploadImage(File)
+  +Future<File> saveImageLocally(File)
+}
+
+class ImageUtils {
+  +Future<File?> pickImageFromGallery()
+  +Future<File?> pickImageFromCamera()
+  +Future<File?> cropImage(File)
+  +Future<bool> saveImageToGallery(File)
+  +Future<File?> saveImageLocally(File, String)
+  +String getDefaultProfileImage()
+  +bool isValidImageFile(File)
+  +double getFileSizeInMB(File)
+  +bool isFileTooLarge(File)
+}
+
+class ValidationUtils {
+  +String? validateNome(String?)
+  +String? validateTelefone(String?)
+  +String? validateDiaNascimento(String?)
+  +String? validateMesNascimento(String?)
+  +String? validateDataNascimento(int?, int?)
+  +String formatTelefone(String)
+  +String formatTelefoneWhatsApp(String)
+  +String getNomeMes(int)
+  +bool isAniversarioHoje(int?, int?)
+  +int calcularIdade(int?, int?, int?)
+}
+
+ApiService --> Contato
+ApiService --> ImageUtils
+Contato ..> ValidationUtils
+ImageUtils ..> ValidationUtils
+
+@enduml
